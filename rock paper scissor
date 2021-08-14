@@ -1,0 +1,33 @@
+import random
+print("\22WELCOME TO ROCK PAPER SCISSOR game\n\n")
+i=1
+lst=[1,2,3]
+win=loose=invalid=0
+
+while(i<=10):
+    
+    print("Select your move \n\2 1.ROCK \n\2 2.PAPER \n\2 3.SCISSOR")
+    move=int(input("\4."))
+    if (move>3):
+        print("your move is invalid .AGAIN PLAY\n\n")
+        invalid = invalid+1
+
+    else:
+     choose = random.choice(lst)
+     print(f"\n\nyou played {i}st move")
+
+     if(choose==move):
+        
+        print("you win")
+        win=win+1
+     else:
+        print("you loose")    
+        loose=loose+1
+     i=i+1
+
+     print("play again\n\n")
+
+
+print(f"\n\23you win {win} times and you loose {loose} times \ninvalid moves {invalid}")
+
+
